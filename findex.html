@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formless Lite</title>
+    <!-- Importing clean modern typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Outfit:wght@600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fstyle.css">
+</head>
+<body>
+
+    <!-- Top Navigation Bar -->
+    <nav class="app-navbar">
+        <div class="brand-logo">Formless Lite</div>
+        <div class="badge-tag">Web Dev 101 Project</div>
+    </nav>
+
+    <!-- Main Dashboard Grid Container -->
+    <main class="dashboard-grid">
+        
+        <!-- Left Panel: Master Profile Data -->
+        <section class="Masterpanel-box">
+            <h3>Your Master Details</h3>
+            
+            <div class="field-wrapper">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" value="Ansh Praveen Mauryan">
+            </div>
+            
+            <div class="field-wrapper">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" value="anshmauryan@gmail.com">
+            </div>
+
+            <div class="field-wrapper">
+                <label for="college">College / Institution</label>
+                <input type="text" id="college" value="Scaler School of Technology">
+            </div>
+
+            <div class="field-wrapper">
+                <label for="address">Address</label>
+                <input type="text" id="address" value="Electronic City, Bengaluru">
+            </div>
+
+            <!-- Dynamically injected custom fields show up here -->
+            <div id="dynamicSourceContainer"></div>
+
+            <button type="button" id="addCustomBtn" class="alt-btn">+ Add Custom Field</button>
+        </section>
+
+        <!-- Right Panel: Target Form & Output -->
+        <section class="panel-box target-accent">
+            <h3>Target Form & Output</h3>
+            
+            <div class="field-wrapper">
+                <label for="formName">Applicant Name (Auto-Filled)</label>
+                <input type="text" id="formName" placeholder="Will be filled...">
+            </div>
+
+            <div class="field-wrapper">
+                <label for="formEmail">Email Address (Auto-Filled)</label>
+                <input type="email" id="formEmail" placeholder="Will be filled...">
+            </div>
+
+            <div class="field-wrapper">
+                <label for="formCollege">Institution (Auto-Filled)</label>
+                <input type="text" id="formCollege" placeholder="Will be filled...">
+            </div>
+
+            <div class="field-wrapper">
+                <label for="formAddress">Address (Auto-Filled)</label>
+                <input type="text" id="formAddress" placeholder="Will be filled...">
+            </div>
+
+            <!-- Dynamically injected target fields show up here -->
+            <div id="dynamicTargetContainer"></div>
+
+            <button type="button" id="triggerFillBtn">Auto-Fill Form</button>
+
+            <!-- Universal Clipboard Copy Box for external forms -->
+            <div class="clipboard-section">
+                <label for="clipboardOutput">Universal Plain Text (For external forms)</label>
+                <textarea id="clipboardOutput" readonly placeholder="Click auto-fill to generate summary text..."></textarea>
+                <button type="button" id="copyClipboardBtn" class="alt-btn">📋 Copy to Clipboard</button>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="fscript.js"></script>
+</body>
+</html>
